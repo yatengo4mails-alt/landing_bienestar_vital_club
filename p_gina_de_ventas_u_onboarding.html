@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bienestar Vital Club - Tu Salud y Familia Protegidas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lucide Icons & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        urgent: '#ef4444',
+                        warning: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .mobile-container { max-width: 480px; margin: 0 auto; background-color: #ffffff; min-height: 100vh; }
+        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(229, 231, 235, 0.8); }
+        .gradient-bg { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 antialiased selection:bg-brand-500 selection:text-white">
+
+    <div class="mobile-container shadow-2xl relative overflow-hidden flex flex-col min-h-screen">
+
+        <!-- HEADER / NAVIGATION -->
+        <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-brand-500/20">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-gray-900 text-base leading-tight block">Bienestar Vital</span>
+                    <span class="text-[10px] text-gray-500 font-semibold tracking-wider uppercase block">Club Familiar</span>
+                </div>
+            </div>
+            <button onclick="scrollToSection('onboarding-section')" class="bg-brand-50 text-brand-700 px-3 py-1.5 rounded-full text-xs font-bold border border-brand-200 hover:bg-brand-100 transition">
+                Prueba 7 Días Gratis
+            </button>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="flex-grow">
+
+            <!-- HERO SECTION -->
+            <section class="px-5 py-8 bg-gradient-to-b from-brand-50/50 to-white text-center">
+                <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1.5 rounded-full mb-4 border border-brand-200">
+                    <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                    Garantía Hotmart de 7 Días Sin Riesgo
+                </div>
+                
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight mb-3">
+                    Controla tu Glucosa y Presión <span class="text-brand-600 underline decoration-brand-500 decoration-wavy decoration-1">Sin Dejar de Comer Sabroso</span>
+                </h1>
+                
+                <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                    Recetas familiares con lo que tienes en el refri, consulta con la Dra. Carmen por IA y protección SOS GPS familiar.
+                </p>
+
+                <div class="space-y-3">
+                    <button onclick="scrollToSection('onboarding-section')" class="w-full bg-brand-600 hover:bg-brand-700 active:scale-[0.98] transition text-white font-bold py-4 px-6 rounded-2xl shadow-lg shadow-brand-600/30 text-base flex items-center justify-center gap-2">
+                        <span>Iniciar Evaluación Gratuita en 60s</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </button>
+                    <p class="text-[11px] text-gray-500 flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-shield-halved text-brand-600"></i> No requiere tarjeta de crédito para iniciar
+                    </p>
+                </div>
+
+                <!-- Proof Banner -->
+                <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-around text-left">
+                    <div class="flex items-center gap-2">
+                        <div class="text-brand-600 font-extrabold text-xl">3 en 1</div>
+                        <div class="text-[11px] text-gray-500 leading-tight">Perfiles por<br>misma cuenta</div>
+                    </div>
+                    <div class="h-8 w-px bg-gray-200"></div>
+                    <div class="flex items-center gap-2">
+                        <div class="text-brand-600 font-extrabold text-xl">+$30K</div>
+                        <div class="text-[11px] text-gray-500 leading-tight">Ahorro estimado<br>anual en comida</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTEXTO Y REALIDAD COTIDIANA (Sin marcas, 100% genérico) -->
+            <section class="px-5 py-6 bg-gray-50 border-y border-gray-100">
+                <h2 class="text-xs font-bold text-brand-700 uppercase tracking-wider mb-2">Entendemos tu día a día</h2>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">¿Te identificas con alguno de estos momentos?</h3>
+                
+                <div class="space-y-3">
+                    <div class="p-3.5 bg-white rounded-xl border border-gray-200/80 shadow-sm flex items-start gap-3">
+                        <div class="text-xl">🍟</div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-900">Comida ultraprocesada o antojitos</p>
+                            <p class="text-xs text-gray-600 mt-0.5">Caer en la tentación con comida rápida, antojitos pesados o alimentos con exceso de sodio y azúcares, viviendo después con culpa o fatiga severa.</p>
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-gray-200/80 shadow-sm flex items-start gap-3">
+                        <div class="text-xl">🥘</div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-900">Los mismos guisados tradicionales de siempre</p>
+                            <p class="text-xs text-gray-600 mt-0.5">Saber que en casa cocinan con amor, pero caer siempre en los mismos platillos con exceso de grasa o harinas que alteran la glucosa y la presión.</p>
+                        </div>
+                    </div>
+                    <div class="p-3.5 bg-white rounded-xl border border-gray-200/80 shadow-sm flex items-start gap-3">
+                        <div class="text-xl">🚨</div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-900">Tranquilidad para los adultos mayores</p>
+                            <p class="text-xs text-gray-600 mt-0.5">Saber que tus papás o familiares mayores están solos en casa o salen a caminar, sin contar con un botón de auxilio directo a tu celular.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERACTIVE ONBOARDING SECTION -->
+            <section id="onboarding-section" class="px-5 py-8 bg-white">
+                <div class="text-center mb-6">
+                    <span class="bg-brand-100 text-brand-800 text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Paso 1: Test de Salud de 60s</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2">Evalúa tu Estado Actual</h2>
+                    <p class="text-xs text-gray-500 mt-1">Ingresa tus lecturas o selecciona cómo te sientes hoy</p>
+                </div>
+
+                <!-- ONBOARDING FORM / TRAFFIC LIGHT TOOL -->
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-200 shadow-inner">
+                    <!-- Step 1: Input Mode Toggle -->
+                    <div class="flex bg-gray-200/80 p-1 rounded-xl mb-4 text-xs font-bold">
+                        <button id="mode-numbers-btn" onclick="switchInputMode('numbers')" class="flex-1 py-2 rounded-lg bg-white shadow-sm text-gray-900 transition font-bold">Medición Exacta</button>
+                        <button id="mode-symptoms-btn" onclick="switchInputMode('symptoms')" class="flex-1 py-2 rounded-lg text-gray-600 transition font-normal">Por Síntomas</button>
+                    </div>
+
+                    <!-- Mode A: Exact Numbers -->
+                    <div id="input-numbers-container" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Glucosa en Sangre (mg/dL)</label>
+                            <div class="relative">
+                                <input type="number" id="input-glucose" placeholder="Ej. 110" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                <span class="absolute right-3 top-2.5 text-xs text-gray-400 font-medium">mg/dL</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Presión Arterial Sistólica (mmHg)</label>
+                            <div class="relative">
+                                <input type="number" id="input-systolic" placeholder="Ej. 120" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                <span class="absolute right-3 top-2.5 text-xs text-gray-400 font-medium">mmHg</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Momento de la Lectura</label>
+                            <select id="input-timing" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                <option value="fasting">En Ayunas (al despertar)</option>
+                                <option value="post">Después de comer (Postprandial)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Mode B: Symptoms Checklist -->
+                    <div id="input-symptoms-container" class="hidden space-y-2">
+                        <label class="block text-xs font-bold text-gray-700 mb-2">Selecciona lo que sientes hoy:</label>
+                        <label class="flex items-center gap-3 p-2.5 bg-white rounded-xl border border-gray-200 text-xs font-medium cursor-pointer">
+                            <input type="checkbox" name="symptom" value="fatigue" class="w-4 h-4 text-brand-600 rounded">
+                            <span>😴 Fatiga extrema o pesado sopor tras comer</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 bg-white rounded-xl border border-gray-200 text-xs font-medium cursor-pointer">
+                            <input type="checkbox" name="symptom" value="thirst" class="w-4 h-4 text-brand-600 rounded">
+                            <span>🌵 Sed excesiva o boca seca constante</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 bg-white rounded-xl border border-gray-200 text-xs font-medium cursor-pointer">
+                            <input type="checkbox" name="symptom" value="headache" class="w-4 h-4 text-brand-600 rounded">
+                            <span>🤕 Pesadez en la nuca o mareos ligeros</span>
+                        </label>
+                    </div>
+
+                    <button onclick="calculateHealthStatus()" class="w-full mt-5 bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 px-4 rounded-xl text-xs uppercase tracking-wider shadow-md transition">
+                        Ver Mi Diagnóstico Inmediato
+                    </button>
+                </div>
+
+                <!-- TRAFFIC LIGHT RESULT DISPLAY (HIDDEN BY DEFAULT) -->
+                <div id="traffic-light-result" class="hidden mt-5 p-5 rounded-2xl text-white transition-all duration-300 shadow-xl">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div id="result-badge-icon" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-xl font-bold"></div>
+                        <div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-white/80">Semáforo de Salud</span>
+                            <h4 id="result-status-title" class="text-lg font-black leading-tight"></h4>
+                        </div>
+                    </div>
+                    <p id="result-status-desc" class="text-xs leading-relaxed text-white/90 mb-4"></p>
+                    
+                    <div class="p-3 bg-black/20 rounded-xl border border-white/10 mb-4">
+                        <p class="text-[11px] font-bold text-white mb-1"><i class="fa-solid fa-user-doctor mr-1"></i> Recomendación Dra. Carmen:</p>
+                        <p id="result-recommendation" class="text-xs text-white/80 leading-snug"></p>
+                    </div>
+
+                    <button onclick="scrollToSection('paywall-section')" class="w-full bg-white text-gray-900 font-extrabold py-3 px-4 rounded-xl text-xs uppercase tracking-wider shadow-lg hover:bg-gray-100 transition flex items-center justify-center gap-2">
+                        <span>Desbloquear Mi Plan Personalizado</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- FEATURE CARDS / EL MECANISMO -->
+            <section class="px-5 py-8 bg-gray-50 border-t border-gray-100">
+                <div class="text-center mb-6">
+                    <h2 class="text-xl font-bold text-gray-900">Todo lo que Obtienes Hoy</h2>
+                    <p class="text-xs text-gray-500 mt-1">Diseñado para la realidad de las familias</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Feature 1: Chef Express por foto / IA -->
+                    <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-lg font-bold mb-3">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <h3 class="font-bold text-sm text-gray-900 mb-1">Chef Express 1+3 (Reconocimiento por Foto IA)</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-3">Tómale foto a 3 ingredientes de tu refri. La app crea al instante una receta deliciosa y segura para hipertensos o diabéticos.</p>
+                        <span class="inline-block text-[10px] font-bold text-orange-700 bg-orange-50 px-2.5 py-1 rounded-md">Ahorra hasta $30,000 MXN/año en desperdicios</span>
+                    </div>
+
+                    <!-- Feature 2: 3 Perfiles Familiares -->
+                    <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg font-bold mb-3">
+                            <i class="fa-solid fa-users-between-lines"></i>
+                        </div>
+                        <h3 class="font-bold text-sm text-gray-900 mb-1">Cuenta Familiar Multi-Perfil (3 en 1)</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-3">Una sola suscripción permite guardar y monitorear hasta 3 perfiles de salud independientes (Papá, Mamá, Tío o Tuyo).</p>
+                        <span class="inline-block text-[10px] font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md">Ideal para cuidar a tus padres o familiares</span>
+                    </div>
+
+                    <!-- Feature 3: Botón SOS GPS -->
+                    <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-lg font-bold mb-3">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h3 class="font-bold text-sm text-gray-900 mb-1">Botón SOS GPS Urbano y Nocturno</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-3">Ante cualquier emergencia o descompensación, envía la ubicación exacta en tiempo real al 911 y por WhatsApp a tu familia.</p>
+                        <span class="inline-block text-[10px] font-bold text-red-700 bg-red-50 px-2.5 py-1 rounded-md">Tranquilidad 24/7 en la calle o en casa</span>
+                    </div>
+
+                    <!-- Feature 4: Dra. Carmen & Biblioteca -->
+                    <div class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg font-bold mb-3">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="font-bold text-sm text-gray-900 mb-1">Dra. Carmen por IA y Biblioteca Vital</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-3">Resuelve dudas nutricionales al instante y accede a un catálogo completo de infusiones y sustitutos saludables.</p>
+                        <span class="inline-block text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">Acompañamiento 24/7 en tu bolsillo</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRICING / PAYWALL SECTION -->
+            <section id="paywall-section" class="px-5 py-8 bg-white border-t border-gray-100">
+                <div class="text-center mb-6">
+                    <span class="bg-brand-100 text-brand-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Paso Final</span>
+                    <h2 class="text-2xl font-black text-gray-900 mt-2">Comienza tus 7 Días Gratis</h2>
+                    <p class="text-xs text-gray-500 mt-1">Elige el plan ideal para ti y tu familia. Cancela cuando quieras.</p>
+                </div>
+
+                <!-- PLAN CARDS -->
+                <div class="space-y-4">
+                    <!-- Plan 1: Anual (Recomendado) -->
+                    <div onclick="selectPlan('annual')" id="card-annual" class="relative bg-gradient-to-br from-brand-50 to-white border-2 border-brand-500 p-5 rounded-2xl shadow-md cursor-pointer transition">
+                        <div class="absolute -top-3 right-4 bg-brand-600 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Ahorras 2 Meses Gratis
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-black text-base text-gray-900">Pase Anual Vital</h3>
+                                <p class="text-xs text-gray-500">3 Perfiles Incluidos para la Familia</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xl font-black text-brand-700">$10.82</span>
+                                <span class="text-[10px] text-gray-500 block">USD / mes</span>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-brand-100 flex items-center justify-between text-xs">
+                            <span class="text-gray-600">Cobro único anual: <strong>$129.90 USD</strong></span>
+                            <span class="font-bold text-brand-700">7 Días Gratis</span>
+                        </div>
+                    </div>
+
+                    <!-- Plan 2: Mensual -->
+                    <div onclick="selectPlan('monthly')" id="card-monthly" class="bg-white border border-gray-200 p-5 rounded-2xl shadow-sm cursor-pointer transition opacity-80">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="font-bold text-base text-gray-900">Suscripción Mensual</h3>
+                                <p class="text-xs text-gray-500">Flexibilidad mes a mes</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xl font-bold text-gray-900">$12.99</span>
+                                <span class="text-[10px] text-gray-500 block">USD / mes</span>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                            <span class="text-gray-600">Cancelación sin penalizaciones</span>
+                            <span class="font-bold text-brand-700">7 Días Gratis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA BUTTON -->
+                <div class="mt-6 space-y-3">
+                    <a id="checkout-cta-btn" href="https://hotmart.com" target="_blank" class="w-full bg-brand-600 hover:bg-brand-700 active:scale-[0.98] transition text-white font-extrabold py-4 px-6 rounded-2xl shadow-xl shadow-brand-600/30 text-center block text-base">
+                        Activar Mis 7 Días Gratis en Hotmart
+                    </a>
+                    
+                    <div class="flex items-center justify-center gap-4 text-[11px] text-gray-500 pt-2">
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-lock text-brand-600"></i> Pago Seguro</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-circle-check text-brand-600"></i> Respaldado por Hotmart</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MEDICAL DISCLAIMER -->
+            <footer class="px-5 py-6 bg-gray-100 border-t border-gray-200 text-center">
+                <p class="text-[10px] text-gray-500 leading-relaxed mb-2">
+                    <strong>Deslinde de Responsabilidad Médica:</strong> Bienestar Vital Club y la Dra. Carmen por IA son herramientas educativas de acompañamiento y estilo de vida. No constituyen un diagnóstico, prescripción ni reemplazo de la consulta médica profesional.
+                </p>
+                <p class="text-[10px] text-gray-400">© 2026 Bienestar Vital Club. Todos los derechos reservados.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- LOGIC SCRIPT -->
+    <script>
+        let currentMode = 'numbers';
+        let selectedPlan = 'annual';
+
+        function switchInputMode(mode) {
+            currentMode = mode;
+            const numBtn = document.getElementById('mode-numbers-btn');
+            const symBtn = document.getElementById('mode-symptoms-btn');
+            const numCont = document.getElementById('input-numbers-container');
+            const symCont = document.getElementById('input-symptoms-container');
+
+            if (mode === 'numbers') {
+                numBtn.className = "flex-1 py-2 rounded-lg bg-white shadow-sm text-gray-900 transition font-bold";
+                symBtn.className = "flex-1 py-2 rounded-lg text-gray-600 transition font-normal";
+                numCont.classList.remove('hidden');
+                symCont.classList.add('hidden');
+            } else {
+                symBtn.className = "flex-1 py-2 rounded-lg bg-white shadow-sm text-gray-900 transition font-bold";
+                numBtn.className = "flex-1 py-2 rounded-lg text-gray-600 transition font-normal";
+                symCont.classList.remove('hidden');
+                numCont.classList.add('hidden');
+            }
+        }
+
+        function calculateHealthStatus() {
+            const resultDiv = document.getElementById('traffic-light-result');
+            const iconBadge = document.getElementById('result-badge-icon');
+            const titleEl = document.getElementById('result-status-title');
+            const descEl = document.getElementById('result-status-desc');
+            const recEl = document.getElementById('result-recommendation');
+
+            resultDiv.classList.remove('hidden');
+
+            if (currentMode === 'numbers') {
+                const glucose = parseFloat(document.getElementById('input-glucose').value) || 110;
+                const sys = parseFloat(document.getElementById('input-systolic').value) || 120;
+                const timing = document.getElementById('input-timing').value;
+
+                let isWarning = (timing === 'fasting' && glucose > 125) || (timing === 'post' && glucose > 180) || sys > 135;
+                let isCritical = glucose > 200 || sys > 160;
+
+                if (isCritical) {
+                    setResultState(resultDiv, iconBadge, titleEl, descEl, recEl, 
+                        'bg-red-600', '<i class="fa-solid fa-triangle-exclamation"></i>', 
+                        'Nivel de Atención Elevado', 
+                        'Tus niveles sobrepasan el rango recomendado. Requiere monitoreo preventivo inmediato.',
+                        'Evita alimentos procesados ricos en sodio o carbohidratos hoy, toma agua y consulta a tu médico. Consulta el menú de emergencia en la app.'
+                    );
+                } else if (isWarning) {
+                    setResultState(resultDiv, iconBadge, titleEl, descEl, recEl, 
+                        'bg-amber-500', '<i class="fa-solid fa-circle-exclamation"></i>', 
+                        'Rango de Precaución Detectado', 
+                        'Tus cifras están ligeramente por encima de lo óptimo para hipertensos o diabéticos.',
+                        'Realiza una caminata ligera de 10 minutos post-comida y prepara una cena ligera con el módulo Chef Express.'
+                    );
+                } else {
+                    setResultState(resultDiv, iconBadge, titleEl, descEl, recEl, 
+                        'bg-emerald-600', '<i class="fa-solid fa-circle-check"></i>', 
+                        'Estado Saludable y Estable', 
+                        '¡Excelente lectura! Estás manteniendo un gran control sobre tu metabolismo hoy.',
+                        'Sigue conservando tus hábitos y utiliza las infusiones relajantes de la Biblioteca Vital para mantener la presión óptima.'
+                    );
+                }
+            } else {
+                const checkedSymptoms = document.querySelectorAll('input[name="symptom"]:checked').length;
+                if (checkedSymptoms >= 2) {
+                    setResultState(resultDiv, iconBadge, titleEl, descEl, recEl, 
+                        'bg-amber-500', '<i class="fa-solid fa-battery-quarter"></i>', 
+                        'Indicios de Sobrecarga Metabólica', 
+                        'Tus síntomas coinciden con picos de glucosa o descompensación ligera de presión.',
+                        'Descansa la digestión, mantente hidratado y consulta a la Dra. Carmen en la app para ajustar tus menús diarios.'
+                    );
+                } else {
+                    setResultState(resultDiv, iconBadge, titleEl, descEl, recEl, 
+                        'bg-emerald-600', '<i class="fa-solid fa-heart-pulse"></i>', 
+                        'Estado General Favorable', 
+                        'No presentas síntomas de alerta severa en este momento.',
+                        'Mantén tu registro preventivo activando tu cuenta familiar hoy mismo.'
+                    );
+                }
+            }
+
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function setResultState(container, icon, title, desc, rec, bgClass, iconHtml, titleText, descText, recText) {
+            container.className = `mt-5 p-5 rounded-2xl text-white transition-all duration-300 shadow-xl ${bgClass}`;
+            icon.innerHTML = iconHtml;
+            title.innerText = titleText;
+            desc.innerText = descText;
+            rec.innerText = recText;
+        }
+
+        function selectPlan(plan) {
+            selectedPlan = plan;
+            const cardAnnual = document.getElementById('card-annual');
+            const cardMonthly = document.getElementById('card-monthly');
+
+            if (plan === 'annual') {
+                cardAnnual.className = "relative bg-gradient-to-br from-brand-50 to-white border-2 border-brand-500 p-5 rounded-2xl shadow-md cursor-pointer transition";
+                cardMonthly.className = "bg-white border border-gray-200 p-5 rounded-2xl shadow-sm cursor-pointer transition opacity-80";
+            } else {
+                cardMonthly.className = "relative bg-gradient-to-br from-brand-50 to-white border-2 border-brand-500 p-5 rounded-2xl shadow-md cursor-pointer transition";
+                cardAnnual.className = "bg-white border border-gray-200 p-5 rounded-2xl shadow-sm cursor-pointer transition opacity-80";
+            }
+        }
+
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
